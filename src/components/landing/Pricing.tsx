@@ -51,8 +51,10 @@ export function Pricing() {
             </div>
             <p className="text-xs text-muted-foreground mt-1">One-time payment · Lifetime License</p>
 
-            <Button variant="neon" size="xl" className="w-full mt-8">
-              Purchase Now
+            <Button variant="neon" size="xl" className="w-full mt-8" asChild>
+              <a href="https://whop.com/checkout/plan_Gm0meTk74VpSY" target="_blank" rel="noopener noreferrer">
+                Purchase Now
+              </a>
             </Button>
 
             <ul className="mt-8 space-y-3">
