@@ -1,13 +1,48 @@
 import { motion } from "framer-motion";
-import { Shield, Newspaper, Settings, TrendingDown, Repeat, MessageCircle } from "lucide-react";
+import { Sparkles, Swords, Zap, ShieldCheck, Scale, TrendingUp, LineChart, Cpu, Crown } from "lucide-react";
 
 const features = [
-  { icon: Shield, title: "Equity Protector", desc: "Hard stop loss, daily drawdown limits, and account-level safeguards built-in." },
-  { icon: Newspaper, title: "Smart News Filter", desc: "Automatically pauses trading during high-impact news events." },
-  { icon: Settings, title: "Plug & Play", desc: "Easy 5-minute setup for MT5. Drag, drop, and let the EA run." },
-  { icon: TrendingDown, title: "Low Drawdown", desc: "Optimized for the strict drawdown rules of every major prop firm." },
-  { icon: Repeat, title: "Strategy Adaptability", desc: "Works seamlessly on Gold, Indices, and major Forex pairs." },
-  { icon: MessageCircle, title: "24/7 Support", desc: "Lifetime updates, set files, and one-on-one setup assistance." },
+  {
+    icon: Sparkles,
+    title: "Multi-Asset Intelligence",
+    desc: "Custom-tuned algorithms for Gold (XAUUSD), Bitcoin (BTC), and major Forex pairs. Switch modes instantly in settings.",
+  },
+  {
+    icon: Swords,
+    title: "Gladiator Mode",
+    desc: "Our signature double-lock entry: 89 EMA macro trend confirmation + Chandelier volatility shift. Built for maximum win-rate.",
+    pro: true,
+  },
+  {
+    icon: Zap,
+    title: "Aggressive Mode",
+    desc: "Rapid entries tuned for fast-moving, high-volatility markets when you want to push the throttle.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Conservative Mode",
+    desc: "Extra filtering for steady, low-drawdown growth — ideal for funded accounts and slow compounding.",
+  },
+  {
+    icon: Scale,
+    title: "Professional Risk Scaling",
+    desc: "Built-in Auto-Lot calculates position size from a % of equity. Stay inside strict prop firm drawdown limits.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Dynamic Chandelier Trailing",
+    desc: "ATR-based Chandelier exits trail your stop loss in real time, locking in profit as the trend extends.",
+  },
+  {
+    icon: LineChart,
+    title: "Macro Trend Filtering",
+    desc: "An 89-period EMA ensures the EA only trades with the dominant trend, slashing fake-out losses.",
+  },
+  {
+    icon: Cpu,
+    title: "Smart Execution",
+    desc: "100% automated entries, exits, and modifications with a unique Magic Number system to isolate trades.",
+  },
 ];
 
 export function Features() {
@@ -17,10 +52,10 @@ export function Features() {
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="text-xs uppercase tracking-[0.2em] text-neon mb-3">Core Features</div>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
-            Everything you need to <span className="text-gradient">stay funded</span>
+            Engineered to <span className="text-gradient">dominate the chart</span>
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Engineered with prop firm rules in mind. Every feature exists to protect your capital and pass evaluations.
+            Every module of Omni Gladiator Pro V7 is built around one goal — protect your capital while compounding consistent gains.
           </p>
         </div>
 
@@ -31,11 +66,24 @@ export function Features() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.06 }}
-              className="group relative rounded-2xl p-6 glass hover:border-neon/40 transition-all hover:-translate-y-1"
+              transition={{ duration: 0.5, delay: i * 0.05 }}
+              className={`group relative rounded-2xl p-6 glass transition-all hover:-translate-y-1 ${
+                f.pro ? "border border-neon/40 glow-border" : "hover:border-neon/40"
+              }`}
             >
-              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"
-                style={{ background: "radial-gradient(circle at top, oklch(0.88 0.22 145 / 0.08), transparent 70%)" }} />
+              {f.pro && (
+                <div className="absolute -top-3 right-5 inline-flex items-center gap-1 rounded-full bg-neon px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-primary-foreground shadow-[0_0_20px_var(--neon-glow)]">
+                  <Crown className="h-3 w-3" />
+                  Pro Feature
+                </div>
+              )}
+              <div
+                className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"
+                style={{
+                  background:
+                    "radial-gradient(circle at top, oklch(0.88 0.22 145 / 0.08), transparent 70%)",
+                }}
+              />
               <div className="relative">
                 <div className="h-11 w-11 rounded-xl bg-neon/10 border border-neon/20 flex items-center justify-center mb-5">
                   <f.icon className="h-5 w-5 text-neon" />
