@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, TrendingUp, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import mt5Chart from "@/assets/mt5-chart.png";
 
 export function Hero() {
   return (
