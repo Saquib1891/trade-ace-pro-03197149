@@ -10,7 +10,7 @@ export function Footer() {
               <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-neon to-neon/60 flex items-center justify-center">
                 <Activity className="h-4 w-4 text-primary-foreground" strokeWidth={2.5} />
               </div>
-              <span className="font-bold text-lg">MT5 EA Pro</span>
+              <span className="font-bold text-lg">Omni Gladiator Pro V7</span>
             </div>
             <p className="text-sm text-muted-foreground max-w-sm">
               The professional Expert Advisor for traders serious about getting funded.
@@ -46,13 +46,13 @@ export function Footer() {
             against you as well as for you. Before deciding to trade, you should carefully consider your investment objectives,
             level of experience, and risk appetite. There is a possibility you could sustain a loss of some or all of your initial
             investment and therefore you should not invest money that you cannot afford to lose. You should be aware of all the
-            risks associated with trading and seek advice from an independent financial advisor if you have any doubts. MT5 EA Pro
+            risks associated with trading and seek advice from an independent financial advisor if you have any doubts. Omni Gladiator Pro V7
             is a software tool — results vary based on market conditions, broker execution, and configuration.
           </p>
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
-          <p>© {new Date().getFullYear()} MT5 EA Pro. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Omni Gladiator Pro V7. All rights reserved.</p>
           <p>Built for serious traders.</p>
         </div>
       </div>

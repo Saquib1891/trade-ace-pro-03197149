@@ -30,7 +30,7 @@ export function Navbar() {
                 <Activity className="h-4 w-4 text-primary-foreground" strokeWidth={2.5} />
               </div>
             </div>
-            <span className="font-bold text-lg tracking-tight">MT5 EA Pro</span>
+            <span className="font-bold text-lg tracking-tight">Omni Gladiator Pro V7</span>
           </a>
 
           <div className="hidden md:flex items-center gap-8">

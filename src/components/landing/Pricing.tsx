@@ -42,7 +42,7 @@ export function Pricing() {
               <span className="text-xs text-muted-foreground">Lifetime</span>
             </div>
 
-            <h3 className="text-xl font-semibold">MT5 EA Pro</h3>
+            <h3 className="text-xl font-semibold">Omni Gladiator Pro V7</h3>
             <p className="text-sm text-muted-foreground mt-1">Everything you need to pass.</p>
 
             <div className="mt-6 flex items-baseline gap-2">
