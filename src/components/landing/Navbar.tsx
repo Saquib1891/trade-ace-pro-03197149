@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Activity, Menu, X } from "lucide-react";
+import { Activity, Menu, X, Send, Instagram, Youtube, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const links = [
@@ -7,6 +7,13 @@ const links = [
   { label: "Live Results", href: "#results" },
   { label: "Pricing", href: "#pricing" },
   { label: "FAQ", href: "#faq" },
+  { label: "Contact", href: "#contact" },
+];
+
+const socials = [
+  { icon: Send, label: "Telegram", href: "#" },
+  { icon: Instagram, label: "Instagram", href: "#" },
+  { icon: Youtube, label: "YouTube", href: "#" },
 ];
 
 export function Navbar() {
@@ -33,7 +40,7 @@ export function Navbar() {
             <span className="font-bold text-lg tracking-tight">Omni Gladiator Pro V7</span>
           </a>
 
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-7">
             {links.map((l) => (
               <a key={l.href} href={l.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 {l.label}
@@ -41,24 +48,54 @@ export function Navbar() {
             ))}
           </div>
 
-          <div className="hidden md:block">
-            <Button variant="neon" size="sm" asChild>
+          <div className="hidden lg:flex items-center gap-2">
+            {socials.map(({ icon: Icon, label, href }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="h-8 w-8 rounded-md flex items-center justify-center text-muted-foreground hover:text-neon transition-colors"
+              >
+                <Icon className="h-4 w-4" />
+              </a>
+            ))}
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-1 inline-flex items-center gap-1.5 h-8 px-2.5 rounded-md border border-neon/40 bg-neon/5 text-xs font-semibold text-neon hover:bg-neon/10 transition-colors"
+            >
+              MQL5 <ExternalLink className="h-3 w-3" />
+            </a>
+            <Button variant="neon" size="sm" asChild className="ml-2">
               <a href="#pricing">Get Started</a>
             </Button>
           </div>
 
-          <button className="md:hidden text-foreground" onClick={() => setOpen(!open)} aria-label="Menu">
+          <button className="lg:hidden text-foreground" onClick={() => setOpen(!open)} aria-label="Menu">
             {open ? <X /> : <Menu />}
           </button>
         </nav>
 
         {open && (
-          <div className="md:hidden glass rounded-xl mt-2 p-4 flex flex-col gap-3 animate-fade-in">
+          <div className="lg:hidden glass rounded-xl mt-2 p-4 flex flex-col gap-3 animate-fade-in">
             {links.map((l) => (
               <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="text-sm text-muted-foreground hover:text-foreground">
                 {l.label}
               </a>
             ))}
+            <div className="flex items-center gap-2 pt-2 border-t border-border/40">
+              {socials.map(({ icon: Icon, label, href }) => (
+                <a key={label} href={href} aria-label={label} className="h-9 w-9 rounded-md border border-border/60 flex items-center justify-center text-muted-foreground hover:text-neon">
+                  <Icon className="h-4 w-4" />
+                </a>
+              ))}
+              <a href="#" className="inline-flex items-center gap-1.5 h-9 px-3 rounded-md border border-neon/40 bg-neon/5 text-xs font-semibold text-neon">
+                MQL5 <ExternalLink className="h-3 w-3" />
+              </a>
+            </div>
             <Button variant="neon" size="sm" asChild>
               <a href="#pricing">Get Started</a>
             </Button>
