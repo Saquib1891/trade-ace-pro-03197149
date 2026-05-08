@@ -93,32 +93,20 @@ export function Hero() {
 }
 
 function DashboardMockup() {
-  const bars = [40, 55, 48, 70, 62, 80, 75, 92, 85, 98, 90, 110];
   return (
-    <div className="rounded-xl bg-background/60 p-4 md:p-6">
-      <div className="flex items-center justify-between mb-6">
+    <div className="rounded-xl bg-background/60 p-3 md:p-4 overflow-hidden">
+      <div className="flex items-center justify-between mb-3">
         <div>
-          <div className="text-xs text-muted-foreground">XAUUSD · Live</div>
-          <div className="text-2xl font-bold mt-1">$12,847.<span className="text-neon">30</span></div>
+          <div className="text-xs text-muted-foreground">XAUUSD · M5 · Live</div>
+          <div className="text-lg md:text-xl font-bold mt-0.5">Omni_Gladiator_Pro_V7</div>
         </div>
-        <div className="flex gap-1.5">
-          <span className="px-2 py-1 text-[10px] rounded bg-neon/10 text-neon border border-neon/30">EA ACTIVE</span>
-        </div>
+        <span className="px-2 py-1 text-[10px] rounded bg-neon/10 text-neon border border-neon/30">EA ACTIVE</span>
       </div>
-
-      <div className="h-40 md:h-48 flex items-end gap-1.5 md:gap-2.5">
-        {bars.map((h, i) => (
-          <div key={i} className="flex-1 flex flex-col justify-end">
-            <div
-              className="w-full rounded-t bg-gradient-to-t from-neon/30 to-neon"
-              style={{ height: `${h}%`, opacity: 0.4 + i * 0.05 }}
-            />
-          </div>
-        ))}
-      </div>
-      <div className="flex justify-between mt-3 text-[10px] text-muted-foreground">
-        <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
-      </div>
+      <img
+        src={mt5Chart}
+        alt="Omni Gladiator Pro V7 live MT5 chart on XAUUSD M5"
+        className="w-full h-auto rounded-lg border border-border/40"
+      />
     </div>
   );
 }
