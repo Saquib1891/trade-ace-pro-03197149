@@ -32,6 +32,7 @@ function Index() {
         <Results />
         <Pricing />
         <FAQ />
+        <Contact />
       </main>
       <Footer />
     </div>
