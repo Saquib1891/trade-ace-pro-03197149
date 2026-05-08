@@ -1,12 +1,30 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const faqs = [
-  { q: "Does it work on MT4?", a: "No. MT5 EA Pro is built exclusively for MetaTrader 5 to leverage its advanced order management, hedging modes, and partial-close functionality that MT4 doesn't support." },
-  { q: "Which prop firms are allowed?", a: "The EA is compatible with all major prop firms including FTMO, FundingPips, Alpha Capital, The5ers, FundedNext, and E8 Markets. It respects daily drawdown rules, news restrictions, and minimum trading days." },
-  { q: "Do I need a VPS?", a: "We strongly recommend running the EA on a low-latency VPS (under 10ms to your broker). This ensures 24/5 uptime and that no signals are missed when your computer is off." },
-  { q: "What's the recommended account size?", a: "The EA is optimized for accounts ranging from $10,000 to $200,000. Smaller accounts work too — risk is calculated as a percentage of equity." },
-  { q: "How fast is setup?", a: "Most users have it running in under 5 minutes. We provide step-by-step videos and 1-on-1 assistance if needed." },
-  { q: "Is there a refund policy?", a: "Yes. We offer a 30-day money-back guarantee, no questions asked." },
+  {
+    q: "Which platform does this EA support?",
+    a: "Omni Gladiator Pro V7 is exclusively built for MetaTrader 5 (MT5) to take advantage of its superior execution speed and multi-threading capabilities.",
+  },
+  {
+    q: "Is this EA prop firm friendly?",
+    a: "Absolutely. With the integrated InpRiskPercent feature, you can set a hard risk limit (e.g., 0.5% or 1% per trade). This keeps you within the daily and total drawdown limits required by firms like FTMO, Funding Pips, and E8.",
+  },
+  {
+    q: "What assets work best with this software?",
+    a: "While it is universal, the code includes optimized logic for Gold, Bitcoin, and Forex. Select your specific asset mode in the settings to automatically adjust the internal filtering.",
+  },
+  {
+    q: "Do I need to keep my computer on 24/7?",
+    a: "For best results — and to ensure the trailing stop works correctly — we recommend running the EA on a VPS (Virtual Private Server). This guarantees 100% uptime regardless of your local internet connection.",
+  },
+  {
+    q: "Can I use it on multiple accounts?",
+    a: "Yes. The EA uses a Magic Number system, allowing you to run multiple instances on the same account with different settings, or on different accounts depending on your license.",
+  },
+  {
+    q: "What is the 'Gladiator' Signal Mode?",
+    a: "It is our proprietary logic that requires a double-lock confirmation: price must be on the correct side of the 89 EMA (macro trend) AND triggered by a Chandelier volatility shift. This is designed to maximize the win rate.",
+  },
 ];
 
 export function FAQ() {

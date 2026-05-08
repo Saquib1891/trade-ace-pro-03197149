@@ -12,9 +12,9 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "MT5 EA Pro — Pass Any Prop Firm Challenge with Automated Trading" },
+      { title: "Omni Gladiator Pro V7 — Pass Any Prop Firm Challenge with Automated Trading" },
       { name: "description", content: "MT5 Expert Advisor with built-in equity protection, news filter, and ultra-low drawdown. Engineered to pass FTMO, FundingPips & all major prop firms." },
-      { property: "og:title", content: "MT5 EA Pro — Automated Prop Firm Passing System" },
+      { property: "og:title", content: "Omni Gladiator Pro V7 — Automated Prop Firm Passing System" },
       { property: "og:description", content: "The professional MT5 EA built to pass prop firm challenges. 92% win rate, 4.5% max drawdown, lifetime license." },
     ],
   }),
