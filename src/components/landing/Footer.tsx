@@ -1,4 +1,10 @@
-import { Activity } from "lucide-react";
+import { Activity, Mail, Send, Instagram, Youtube, ExternalLink } from "lucide-react";
+
+const socials = [
+  { icon: Send, label: "Telegram", href: "#" },
+  { icon: Instagram, label: "Instagram", href: "#" },
+  { icon: Youtube, label: "YouTube", href: "#" },
+];
 
 export function Footer() {
   return (
@@ -12,9 +18,37 @@ export function Footer() {
               </div>
               <span className="font-bold text-lg">Omni Gladiator Pro V7</span>
             </div>
-            <p className="text-sm text-muted-foreground max-w-sm">
+            <p className="text-sm text-muted-foreground max-w-sm mb-5">
               The professional Expert Advisor for traders serious about getting funded.
             </p>
+            <a
+              href="mailto:memorialcollection11@gmail.com"
+              className="inline-flex items-center gap-2 text-sm text-neon hover:underline mb-5"
+            >
+              <Mail className="h-4 w-4" /> memorialcollection11@gmail.com
+            </a>
+            <div className="flex items-center gap-3">
+              {socials.map(({ icon: Icon, label, href }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="h-9 w-9 rounded-lg border border-border/60 bg-background/40 flex items-center justify-center text-muted-foreground hover:text-neon hover:border-neon/40 hover:bg-neon/5 transition-colors"
+                >
+                  <Icon className="h-4 w-4" />
+                </a>
+              ))}
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-1 inline-flex items-center gap-1.5 h-9 px-3 rounded-lg border border-neon/40 bg-neon/5 text-xs font-semibold text-neon hover:bg-neon/10 transition-colors"
+              >
+                MQL5 Profile <ExternalLink className="h-3 w-3" />
+              </a>
+            </div>
           </div>
 
           <div>
@@ -30,7 +64,7 @@ export function Footer() {
           <div>
             <h4 className="text-sm font-semibold mb-3">Company</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#" className="hover:text-foreground">Contact</a></li>
+              <li><a href="#contact" className="hover:text-foreground">Contact</a></li>
               <li><a href="#" className="hover:text-foreground">Privacy</a></li>
               <li><a href="#" className="hover:text-foreground">Terms</a></li>
               <li><a href="#" className="hover:text-foreground">Support</a></li>
@@ -52,8 +86,8 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
-          <p>© {new Date().getFullYear()} Omni Gladiator Pro V7. All rights reserved.</p>
-          <p>Built for serious traders.</p>
+          <p>© 2026 Gladiator Software. All rights reserved.</p>
+          <p>Founder: <span className="text-foreground/80 font-medium">Mohammed Saquib Qureshi</span></p>
         </div>
       </div>
     </footer>
