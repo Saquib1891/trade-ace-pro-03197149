@@ -40,14 +40,6 @@ export function Footer() {
                   <Icon className="h-4 w-4" />
                 </a>
               ))}
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="ml-1 inline-flex items-center gap-1.5 h-9 px-3 rounded-lg border border-neon/40 bg-neon/5 text-xs font-semibold text-neon hover:bg-neon/10 transition-colors"
-              >
-                MQL5 Profile <ExternalLink className="h-3 w-3" />
-              </a>
             </div>
           </div>
 
