@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Activity, Menu, X, Send, Instagram, Youtube, ExternalLink } from "lucide-react";
+import { Activity, Menu, X, Send, Instagram, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const links = [
@@ -11,9 +11,9 @@ const links = [
 ];
 
 const socials = [
-  { icon: Send, label: "Telegram", href: "#" },
-  { icon: Instagram, label: "Instagram", href: "#" },
-  { icon: Youtube, label: "YouTube", href: "#" },
+  { icon: Send, label: "Telegram", href: "https://t.me/GladIndicator" },
+  { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/gladiatorsoft123/?hl=en" },
+  { icon: Youtube, label: "YouTube", href: "https://www.youtube.com/@Gladiator189" },
 ];
 
 export function Navbar() {
@@ -61,14 +61,6 @@ export function Navbar() {
                 <Icon className="h-4 w-4" />
               </a>
             ))}
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ml-1 inline-flex items-center gap-1.5 h-8 px-2.5 rounded-md border border-neon/40 bg-neon/5 text-xs font-semibold text-neon hover:bg-neon/10 transition-colors"
-            >
-              MQL5 <ExternalLink className="h-3 w-3" />
-            </a>
             <Button variant="neon" size="sm" asChild className="ml-2">
               <a href="#pricing">Get Started</a>
             </Button>
@@ -92,9 +84,6 @@ export function Navbar() {
                   <Icon className="h-4 w-4" />
                 </a>
               ))}
-              <a href="#" className="inline-flex items-center gap-1.5 h-9 px-3 rounded-md border border-neon/40 bg-neon/5 text-xs font-semibold text-neon">
-                MQL5 <ExternalLink className="h-3 w-3" />
-              </a>
             </div>
             <Button variant="neon" size="sm" asChild>
               <a href="#pricing">Get Started</a>
