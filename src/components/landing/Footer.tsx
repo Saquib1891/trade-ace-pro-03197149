@@ -1,9 +1,9 @@
-import { Activity, Mail, Send, Instagram, Youtube, ExternalLink } from "lucide-react";
+import { Activity, Mail, Send, Instagram, Youtube } from "lucide-react";
 
 const socials = [
-  { icon: Send, label: "Telegram", href: "#" },
-  { icon: Instagram, label: "Instagram", href: "#" },
-  { icon: Youtube, label: "YouTube", href: "#" },
+  { icon: Send, label: "Telegram", href: "https://t.me/GladIndicator" },
+  { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/gladiatorsoft123/?hl=en" },
+  { icon: Youtube, label: "YouTube", href: "https://www.youtube.com/@Gladiator189" },
 ];
 
 export function Footer() {

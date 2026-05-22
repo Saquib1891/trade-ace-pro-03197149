@@ -61,14 +61,6 @@ export function Navbar() {
                 <Icon className="h-4 w-4" />
               </a>
             ))}
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ml-1 inline-flex items-center gap-1.5 h-8 px-2.5 rounded-md border border-neon/40 bg-neon/5 text-xs font-semibold text-neon hover:bg-neon/10 transition-colors"
-            >
-              MQL5 <ExternalLink className="h-3 w-3" />
-            </a>
             <Button variant="neon" size="sm" asChild className="ml-2">
               <a href="#pricing">Get Started</a>
             </Button>
@@ -92,9 +84,6 @@ export function Navbar() {
                   <Icon className="h-4 w-4" />
                 </a>
               ))}
-              <a href="#" className="inline-flex items-center gap-1.5 h-9 px-3 rounded-md border border-neon/40 bg-neon/5 text-xs font-semibold text-neon">
-                MQL5 <ExternalLink className="h-3 w-3" />
-              </a>
             </div>
             <Button variant="neon" size="sm" asChild>
               <a href="#pricing">Get Started</a>
