@@ -56,10 +56,10 @@ export function Footer() {
           <div>
             <h4 className="text-sm font-semibold mb-3">Company</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#contact" className="hover:text-foreground">Contact</a></li>
-              <li><a href="#" className="hover:text-foreground">Privacy</a></li>
-              <li><a href="#" className="hover:text-foreground">Terms</a></li>
-              <li><a href="#" className="hover:text-foreground">Support</a></li>
+              <li><a href="/legal?tab=contact" className="hover:text-foreground">Contact</a></li>
+              <li><a href="/legal?tab=privacy" className="hover:text-foreground">Privacy</a></li>
+              <li><a href="/legal?tab=terms" className="hover:text-foreground">Terms</a></li>
+              <li><a href="/legal?tab=support" className="hover:text-foreground">Support</a></li>
             </ul>
           </div>
         </div>
