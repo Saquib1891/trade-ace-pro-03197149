@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Check, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const baseFeatures = [
+const features = [
   "1 Real Account License",
   "Unlimited Demo Accounts",
   "Optimized Set Files Included",
@@ -10,30 +10,7 @@ const baseFeatures = [
   "Prop Firm Compatible (FTMO, FundingPips +)",
   "1-on-1 Setup Assistance",
   "Private Community Access",
-];
-
-const plans = [
-  {
-    name: "1 Month Access",
-    price: "$200",
-    period: "Monthly subscription",
-    badge: null,
-    href: "https://whop.com/checkout/plan_unwdvLZWYlnSp",
-  },
-  {
-    name: "2 Month Access",
-    price: "$300",
-    period: "2-month subscription",
-    badge: "Popular",
-    href: "https://whop.com/checkout/plan_pdMEANS0s37d5",
-  },
-  {
-    name: "Lifetime Access",
-    price: "$600",
-    period: "One-time payment · Lifetime License",
-    badge: "Best Value",
-    href: "https://whop.com/checkout/plan_gLqYxFwVJNOJB",
-  },
+  "30-Day Money Back Guarantee",
 ];
 
 export function Pricing() {
@@ -44,62 +21,54 @@ export function Pricing() {
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="text-xs uppercase tracking-[0.2em] text-neon mb-3">Pricing</div>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
-            Choose your <span className="text-gradient">access plan.</span>
+            One price. <span className="text-gradient">Lifetime access.</span>
           </h2>
-          <p className="mt-4 text-muted-foreground">Flexible subscriptions or lifetime ownership. Pick what fits your trading journey.</p>
+          <p className="mt-4 text-muted-foreground">No subscriptions. No upsells. Just one tool that pays for itself.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {plans.map((plan, i) => (
-            <motion.div
-              key={plan.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="relative"
-            >
-              <div className={`absolute -inset-2 blur-2xl rounded-3xl ${plan.badge ? "bg-neon/20" : "bg-neon/10"}`} />
-              <div className="relative glass rounded-3xl p-7 glow-border h-full flex flex-col">
-                <div className="flex items-center justify-between mb-5">
-                  {plan.badge ? (
-                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-neon/10 border border-neon/30 text-neon text-xs font-medium">
-                      <Sparkles className="h-3 w-3" />
-                      {plan.badge}
-                    </div>
-                  ) : (
-                    <span />
-                  )}
-                  <span className="text-xs text-muted-foreground">{plan.period}</span>
-                </div>
-
-                <h3 className="text-lg font-semibold">Omni Gladiator Pro V7</h3>
-                <p className="text-sm text-muted-foreground mt-1">{plan.name}</p>
-
-                <div className="mt-5 flex items-baseline gap-2">
-                  <span className="text-4xl font-bold">{plan.price}</span>
-                </div>
-
-                <Button variant="neon" size="xl" className="w-full mt-6" asChild>
-                  <a href={plan.href} target="_blank" rel="noopener noreferrer">
-                    Purchase Now
-                  </a>
-                </Button>
-
-                <ul className="mt-6 space-y-2.5 flex-1">
-                  {baseFeatures.map((f) => (
-                    <li key={f + plan.name} className="flex items-start gap-3 text-sm">
-                      <div className="mt-0.5 h-5 w-5 rounded-full bg-neon/15 border border-neon/30 flex items-center justify-center flex-shrink-0">
-                        <Check className="h-3 w-3 text-neon" strokeWidth={3} />
-                      </div>
-                      <span className="text-muted-foreground">{f}</span>
-                    </li>
-                  ))}
-                </ul>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="max-w-md mx-auto relative"
+        >
+          <div className="absolute -inset-2 bg-neon/20 blur-2xl rounded-3xl" />
+          <div className="relative glass rounded-3xl p-8 glow-border">
+            <div className="flex items-center justify-between mb-6">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-neon/10 border border-neon/30 text-neon text-xs font-medium">
+                <Sparkles className="h-3 w-3" />
+                Most Popular
               </div>
-            </motion.div>
-          ))}
-        </div>
+              <span className="text-xs text-muted-foreground">Lifetime</span>
+            </div>
+
+            <h3 className="text-xl font-semibold">Omni Gladiator Pro V7</h3>
+            <p className="text-sm text-muted-foreground mt-1">Everything you need to pass.</p>
+
+            <div className="mt-6 flex items-baseline gap-2">
+              <span className="text-5xl font-bold">$150</span>
+              <span className="text-muted-foreground line-through text-sm">$299</span>
+            </div>
+            <p className="text-xs text-muted-foreground mt-1">One-time payment · Lifetime License</p>
+
+            <Button variant="neon" size="xl" className="w-full mt-8" asChild>
+              <a href="https://whop.com/checkout/plan_Gm0meTk74VpSY" target="_blank" rel="noopener noreferrer">
+                Purchase Now
+              </a>
+            </Button>
+
+            <ul className="mt-8 space-y-3">
+              {features.map((f) => (
+                <li key={f} className="flex items-start gap-3 text-sm">
+                  <div className="mt-0.5 h-5 w-5 rounded-full bg-neon/15 border border-neon/30 flex items-center justify-center flex-shrink-0">
+                    <Check className="h-3 w-3 text-neon" strokeWidth={3} />
+                  </div>
+                  <span className="text-muted-foreground">{f}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

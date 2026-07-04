@@ -47,7 +47,7 @@ export function Hero() {
           className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3"
         >
           <Button variant="neon" size="xl" asChild>
-            <a href="#pricing">Get Started <ArrowRight className="h-4 w-4" /></a>
+            <a href="https://whop.com/checkout/plan_Gm0meTk74VpSY" target="_blank" rel="noopener noreferrer">Buy Now — $150 <ArrowRight className="h-4 w-4" /></a>
           </Button>
           <Button variant="neon-outline" size="xl" asChild>
             <a href="#results">See Live Results</a>
