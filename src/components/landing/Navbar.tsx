@@ -11,8 +11,8 @@ const links = [
 ];
 
 const socials = [
-  { icon: Send, label: "Telegram", href: "https://t.me/GladIndicator" },
-  { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/gladiatorsoft123/?hl=en" },
+  { icon: Send, label: "Telegram", href: "https://t.me/Saquib189" },
+  { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/ahali3299349/?hl=en" },
   { icon: Youtube, label: "YouTube", href: "https://www.youtube.com/@Gladiator189" },
 ];
 

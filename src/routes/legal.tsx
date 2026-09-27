@@ -168,7 +168,7 @@ function ContactPanel() {
             The community link is accessible via your <span className="text-foreground font-medium">Whop Customer Dashboard</span> after purchase.
           </p>
           <a
-            href="https://t.me/GladIndicator"
+            href="https://t.me/Saquib189"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg border border-neon/40 bg-neon/10 px-4 py-2 text-sm font-medium text-neon hover:bg-neon/20 transition-colors"
