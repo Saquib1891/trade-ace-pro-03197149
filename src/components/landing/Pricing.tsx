@@ -36,7 +36,7 @@ const plans = [
     name: "Professional",
     price: "$600",
     period: "One-time payment · Lifetime License",
-    href: "https://whop.com/checkout/plan_gLqYxFwVJNOJB",
+    href: "https://whop.com/checkout/plan_1oZMzIJXoQXFr",
     features: [
       "1 Real Account License",
       "Unlimited Demo Accounts",
